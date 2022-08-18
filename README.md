@@ -4,8 +4,10 @@ Steps to reproduce:
 
 ```conan install . --install-folder build```
 
-```cmake . -DCMAKE_TOOLCHAIN_FILE=build/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release```
+```cd build```
+
+```cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release```
 
 ```cmake --build .```
 
-```./DisplayImage logo.png```
+```./DisplayImage ../logo.png```
